@@ -35,7 +35,7 @@ function HikingBG() {
   document.body.style.backgroundImage = "url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/appalachian-trail-nc-tn-roan-mountain-tranquility-robert-stephens.jpg')";
   document.body.style.backgroundSize = "1700px 1000px";
 }
-
+ 
 function RunningBG() {
   document.body.style.backgroundColor = "#f3f3f3";
   document.body.style.backgroundImage = "url('https://img.freepik.com/premium-photo/person-jogging-forest_797506-212.jpg')";
