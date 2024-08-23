@@ -131,9 +131,26 @@ body, html{
   background-color: #f1f1f1;
 }
 
-.style{
-  margin-top: 530px;
+.hikingstyle{
+  margin-top: 350px;
 }
+
+.pushupstyle{
+  margin-top: 570px;
+}
+
+.runningstyle{
+  margin-top: 570px;
+}
+
+plankstyle{
+  margin-top: 570px;
+}
+
+homestyle{
+  margin-top: 570px;
+}
+
 
 /* Style the buttons that are used to open the tab content */
 .tab button {
