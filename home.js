@@ -347,3 +347,55 @@ function showResult() {
 function redirectHiking(){
   
 }
+
+const logInput = document.getElementById('logInput');
+const addLogButton = document.getElementById('addLogButton');
+const logList = document.getElementById('logList');
+
+let logs = [];
+
+function displayLogs() {
+  logList.innerHTML = '';
+
+  logs.forEach((log, index) => {
+    const li = document.createElement('li');
+    li.textContent = log;
+
+    const deleteBtn = document.createElement('button');
+    deleteBtn.textContent = 'Delete';
+    deleteBtn.classList.add('delete-btn');
+    deleteBtn.addEventListener('click', () => deleteLog(index));
+
+    li.appendChild(deleteBtn);
+    logList.appendChild(li);
+  });
+}
+
+function addLog() {
+  const logText = logInput.value.trim();
+  if (logText === '') {
+    alert('Please enter a log entry.');
+    return;
+  }
+
+  logs.push(logText);
+  localStorage.setItem('logs', JSON.stringify(logs));
+  logInput.value = '';
+  displayLogs();
+}
+
+function deleteLog(index) {
+  logs.splice(index, 1);
+  localStorage.setItem('logs', JSON.stringify(logs));
+  displayLogs();
+}
+
+addLogButton.addEventListener('click', addLog);
+
+logInput.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    addLog();
+  }
+});
+
+displayLogs();
