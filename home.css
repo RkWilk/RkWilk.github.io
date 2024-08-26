@@ -187,3 +187,40 @@ homestyle{
 .white{
   color: white;
 }
+
+.log-container {
+      max-width: 600px;
+      margin: auto;
+    }
+    .input-group {
+      display: flex;
+      margin-bottom: 20px;
+    }
+    #logInput {
+      flex: 1;
+      padding: 10px;
+      font-size: 16px;
+    }
+    #addLogButton {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-left: 10px;
+    }
+    .logs {
+      list-style-type: none;
+      padding: 0;
+    }
+    .logs li {
+      background: #f4f4f4;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 4px;
+      align-items: center;
+    }
+    .logs li .delete-btn {
+      background: #e74c3c;
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 3px;
+    }
